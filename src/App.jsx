@@ -6,6 +6,7 @@ import About from './pages/About/About';
 import Events from './pages/Events/Events';
 import Contact from './pages/Contact/Contact';
 import Members from './pages/Members/Members';
+import Developers from './pages/Developers/Developers';
 import Flagship from './pages/Events/Flagship';
 import Technical from './pages/Events/Technical';
 import NonTech from './pages/Events/NonTech';
@@ -44,6 +45,7 @@ function App() {
                     </Route>
                     <Route path="contact" element={<Contact />} />
                     <Route path="members" element={<Members />} />
+                    <Route path="developers" element={<Developers />} />
                 </Route>
             </Routes>
         </Router>
