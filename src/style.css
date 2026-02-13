@@ -834,3 +834,21 @@ canvas {
 .animate-float-premium {
   animation: ST_Float 6s ease-in-out infinite;
 }
+
+/* Global fix for countdown flip cards - hide inverted numbers */
+.st-flip-card,
+.st-flip-card * {
+  backface-visibility: hidden !important;
+  -webkit-backface-visibility: hidden !important;
+}
+
+.st-flip-card {
+  overflow: hidden !important;
+}
+
+/* Hide any element being rotated (inverted state) */
+[style*="rotateX(180"],
+[style*="rotateY(180"] {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}

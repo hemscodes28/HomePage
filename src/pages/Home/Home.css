@@ -33,6 +33,7 @@
     text-align: center;
 }
 
+
 .hero-countdown-centered .st-flip-clock {
     gap: 1rem;
     transform: scale(0.8);
@@ -40,20 +41,70 @@
     justify-content: center;
 }
 
-.hero-countdown-small .st-flip-card {
-    width: 35px;
-    height: 50px;
+/* Aggressive fix for flip cards - target all possible elements */
+.hero-countdown-small .st-flip-card,
+.st-countdown-container .st-flip-card,
+.st-flip-card {
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    overflow: hidden !important;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
 }
 
-.hero-countdown-small .st-flip-card-inner {
-    font-size: 2rem;
+.hero-countdown-small .st-flip-card-inner,
+.st-countdown-container .st-flip-card-inner,
+.st-flip-card-inner,
+.st-flip-card>div,
+.st-flip-card>span {
+    transform-style: preserve-3d;
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+}
+
+/* Hide ALL back faces during flip */
+.st-flip-card-inner.flip-card-back,
+.st-flip-card>div[style*="rotateX"],
+.st-flip-card>span[style*="rotateX"] {
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
+    visibility: hidden !important;
+}
+
+/* Ensure front faces are visible */
+.st-flip-card-inner.flip-card-front {
+    backface-visibility: hidden !important;
+    -webkit-backface-visibility: hidden !important;
 }
 
 .hero-countdown-small .st-flip-label {
     font-size: 0.5rem;
+    white-space: nowrap;
 }
 
 .hero-countdown-small .st-separator {
     font-size: 2rem;
     margin-top: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+/* Word-by-word slide-up animation */
+@keyframes slide-up-word {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up-word {
+    animation: slide-up-word 0.6s ease-out;
 }

@@ -32,15 +32,15 @@ const Navbar = () => {
                 <div className="absolute inset-0 bg-[url('/assets/noise.png')] opacity-5 mix-blend-overlay rounded-full"></div>
 
                 <div className="flex items-center space-x-3 group cursor-pointer relative z-10 transition-all duration-500 ">
-                    {/* College Logo with Premium Effects */}
+                    {/* CIT Logo with Premium Effects */}
                     <div className="relative flex items-center justify-center logo-animate">
                         {/* Glow Effects */}
-                        <div className="absolute inset-0 bg-white/20 blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-700 rounded-xl"></div>
-                        <div className="absolute inset-0 bg-gradient-to-tr from-st-red/30 to-white/10 rounded-xl scale-0 group-hover:scale-110 transition-transform duration-700 opacity-0 group-hover:opacity-100"></div>
+                        <div className="absolute inset-0 bg-white/20 blur-2xl opacity-0 group-hover:opacity-60 transition-all duration-700 rounded-full"></div>
+                        <div className="absolute inset-0 bg-gradient-to-tr from-st-red/30 to-white/10 rounded-full scale-0 group-hover:scale-110 transition-transform duration-700 opacity-0 group-hover:opacity-100"></div>
 
-                        {/* Logo Container with White Background */}
-                        <div className="relative z-10 bg-white rounded-lg overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] px-3 py-2">
-                            <img src={sympoLogo} alt="Coimbatore Institute of Technology" className="h-12 w-auto object-contain transform transition-transform duration-700 group-" />
+                        {/* Logo Container with White Background - Circular */}
+                        <div className="relative z-10 bg-white rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] p-1">
+                            <img src={sympoLogo} alt="Coimbatore Institute of Technology" className="h-14 w-auto object-contain transform transition-transform duration-700 group-" />
                         </div>
                     </div>
 

@@ -147,8 +147,9 @@ const Home = () => {
                     {/* Left Column: Redesigned Hero Typography */}
                     <div className="w-full lg:w-[50%] flex flex-col items-center text-center space-y-8 animate-slide-up opacity-0 pointer-events-auto" style={{ animationFillMode: 'forwards', animationDelay: '0.2s' }}>
                         <div className="flex flex-col space-y-2 items-center">
-                            <span className="hero-presents">Department of Artificial Intelligence & Data Science presents</span>
-                            <span className="hero-symposium">National Level Technical Symposium</span>
+                            <span className="text-st-red text-base md:text-lg font-bold tracking-wide" style={{ textShadow: '0 0 20px rgba(255,0,51,0.6)' }}>DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE</span>
+                            <span className="text-white text-sm md:text-base font-semibold tracking-widest uppercase">Proudly Presents</span>
+                            <span className="text-gray-400 text-sm md:text-base font-bold tracking-wide uppercase">National Level Technical Symposium</span>
                         </div>
 
                         <div className="relative w-full flex justify-center mb-8">
@@ -159,25 +160,106 @@ const Home = () => {
                             </div>
                         </div>
 
-                        <p className="hero-description dropdown-shadow-lg mx-auto">
-                            "Intellina 2k26" is the premier national level technical symposium hosted by the&nbsp;
-                            <span className="text-st-red font-bold">Department of AI & DS</span> at C.I.T.
-                            Enter a dimension where technology meets the supernatural, featuring high-stakes coding battles,
-                            AI innovations, and the ultimate technical challenges.
-                        </p>
+                        {/* Netflix-style Info Bar - More Spacing */}
+                        <div className="flex flex-wrap items-center justify-center gap-4 md:gap-6 mb-8 text-sm md:text-base font-bold">
+                            <span className="text-green-500">99% Match</span>
+                            <span className="text-white">2026</span>
+                            <span className="text-st-red">9.9/10 ★ C.I.T.</span>
+                            <span className="text-gray-400">Technical Symposium</span>
+                        </div>
+
+                        {/* Animated Quote - Word by Word from Bottom */}
+                        <div className="hero-description mx-auto text-2xl md:text-3xl font-black tracking-wider mb-6 flex gap-2 justify-center items-center">
+                            {['Innovate', 'Inspire', 'Integrate'].map((word, index) => (
+                                <React.Fragment key={word}>
+                                    <span
+                                        className="inline-block animate-slide-up-word opacity-0"
+                                        style={{
+                                            animationDelay: `${0.6 + index * 0.2}s`,
+                                            animationFillMode: 'forwards',
+                                            textShadow: '0 0 20px rgba(255,0,51,0.8)',
+                                            background: 'linear-gradient(to right, #fff, #ff0033, #fff)',
+                                            WebkitBackgroundClip: 'text',
+                                            WebkitTextFillColor: 'transparent',
+                                            backgroundClip: 'text'
+                                        }}
+                                    >
+                                        {word}
+                                    </span>
+                                    {index < 2 && (
+                                        <span
+                                            className="text-st-red opacity-0 animate-slide-up-word"
+                                            style={{
+                                                animationDelay: `${0.7 + index * 0.2}s`,
+                                                animationFillMode: 'forwards'
+                                            }}
+                                        >
+                                            .
+                                        </span>
+                                    )}
+                                </React.Fragment>
+                            ))}
+                        </div>
+
+                        {/* Date and Location Info Boxes - Unique Design */}
+                        <div className="flex flex-wrap justify-center gap-6 mb-8">
+                            {/* Date Box - Glassmorphic with Glow - Links to Google Calendar */}
+                            <a
+                                href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Intellina+2K26+-+National+Level+Technical+Symposium&dates=20260306/20260308&details=Department+of+Artificial+Intelligence+%26+Data+Science+presents+Intellina+2K26&location=Coimbatore+Institute+of+Technology,+Coimbatore"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative px-8 py-5 rounded-2xl border-2 border-st-red/50 bg-gradient-to-br from-black/60 to-st-red/10 backdrop-blur-xl min-w-[200px] transition-all duration-500 hover:scale-110 hover:border-st-red hover:shadow-[0_0_40px_rgba(255,0,51,0.6)] cursor-pointer"
+                            >
+                                {/* Animated Background Glow */}
+                                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-st-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+
+                                <div className="relative z-10 flex flex-col items-center gap-2">
+                                    <div className="flex items-center gap-2">
+                                        <svg className="w-5 h-5 text-st-red" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd" />
+                                        </svg>
+                                        <span className="text-gray-300 text-xs uppercase tracking-[0.2em] font-semibold">Event Date</span>
+                                    </div>
+                                    <span className="text-white text-xl font-black tracking-wide group-hover:text-st-red transition-colors duration-300">March 6 & 7</span>
+                                </div>
+                            </a>
+
+                            {/* Location Box - Glassmorphic with Glow - Links to Google Maps */}
+                            <a
+                                href="https://www.google.com/maps/search/Coimbatore+Institute+of+Technology"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative px-8 py-5 rounded-2xl border-2 border-st-red/50 bg-gradient-to-br from-black/60 to-st-red/10 backdrop-blur-xl min-w-[200px] transition-all duration-500 hover:scale-110 hover:border-st-red hover:shadow-[0_0_40px_rgba(255,0,51,0.6)] cursor-pointer"
+                            >
+                                {/* Animated Background Glow */}
+                                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-st-red/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+
+                                <div className="relative z-10 flex flex-col items-center gap-2">
+                                    <div className="flex items-center gap-2">
+                                        <svg className="w-5 h-5 text-st-red" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
+                                        </svg>
+                                        <span className="text-gray-300 text-xs uppercase tracking-[0.2em] font-semibold">Location</span>
+                                    </div>
+                                    <span className="text-white text-xl font-black tracking-wide group-hover:text-st-red transition-colors duration-300">C.I.T</span>
+                                </div>
+                            </a>
+                        </div>
 
                         <div className="flex flex-wrap justify-center gap-6 pt-4">
-                            {/* Play/Register Button */}
-                            <button className="flex items-center gap-3 px-10 py-3 bg-white text-black font-bold text-lg rounded-md hover:bg-white/80 transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                                <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg>
-                                REGISTER
-                            </button>
+                            {/* Register Button - Premium Design with Pulse Effect */}
+                            <button className="group relative flex items-center gap-3 px-12 py-4 bg-gradient-to-r from-white via-gray-100 to-white text-black font-black text-xl rounded-xl overflow-hidden transition-all duration-500 transform hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.4)] hover:shadow-[0_0_50px_rgba(255,255,255,0.8)]">
+                                {/* Animated Background Shine */}
+                                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
 
-                            {/* My List/Explore Button */}
-                            <Link to="/events" className="flex items-center gap-3 px-10 py-3 bg-gray-500/30 backdrop-blur-md text-white border border-gray-400/30 font-bold text-lg rounded-md hover:bg-gray-500/50 transition-all duration-300 transform hover:scale-105 active:scale-95">
-                                <svg className="w-6 h-6 fill-none stroke-current stroke-2" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" /></svg>
-                                EXPLORE EVENTS
-                            </Link>
+                                {/* Pulsing Border Effect */}
+                                <div className="absolute inset-0 rounded-xl border-2 border-st-red/0 group-hover:border-st-red/50 transition-all duration-500"></div>
+
+                                <svg className="relative z-10 w-7 h-7 fill-current group-hover:animate-pulse" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                                <span className="relative z-10 tracking-wider">REGISTER</span>
+                            </button>
                         </div>
                     </div>
 
@@ -231,108 +313,6 @@ const Home = () => {
                                 <div className="w-2 h-2 rounded-full bg-st-red animate-pulse"></div>
                                 <span className="text-xs uppercase tracking-[0.3em] text-st-red/80 font-bold">LIVE COUNTDOWN // MARCH 6, 2026</span>
                                 <div className="w-2 h-2 rounded-full bg-st-red animate-pulse"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* About Section */}
-            <div id="about" className="relative z-10 container mx-auto px-6 py-32 border-t border-st-red/10">
-                <div className="max-w-4xl mx-auto space-y-12">
-                    <div className="text-center space-y-4">
-                        <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter" style={{ textShadow: '0 0 50px rgba(255,0,51,0.8)' }}>
-                            ABOUT THE EVENT
-                        </h2>
-                        <div className="h-1 w-32 bg-st-red mx-auto"></div>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-12 text-gray-300 text-lg leading-relaxed">
-                        <div className="space-y-6">
-                            <p className="first-letter:text-6xl first-letter:font-bold first-letter:text-st-red first-letter:mr-3 first-letter:float-left">
-                                Intellina 2k26 is a journey into the uncharted territories of artificial intelligence and supernatural technology.
-                                Hosted by the Department of AI & DS at CIT, we bridge the gap between reality and the extraordinary.
-                            </p>
-                        </div>
-                        <div className="glass-premium p-8 rounded-2xl border border-st-red/30">
-                            <h3 className="text-st-red font-bold text-xl mb-4 tracking-widest">WHY JOIN?</h3>
-                            <ul className="space-y-4 list-none">
-                                <li className="flex items-start gap-3">
-                                    <span className="text-st-red mt-1">▶</span>
-                                    <span>High stakes technical challenges with premium rewards.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-st-red mt-1">▶</span>
-                                    <span>Networking with industry leaders in AI and Data Science.</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-st-red mt-1">▶</span>
-                                    <span>A cinematic experience like no other.</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Events Section */}
-            <div id="events" className="relative z-10 container mx-auto px-6 py-32 border-t border-st-red/10">
-                <div className="max-w-6xl mx-auto space-y-16">
-                    <div className="text-center space-y-4">
-                        <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter" style={{ textShadow: '0 0 50px rgba(255,0,51,0.8)' }}>
-                            SYMPOSIUM EVENTS
-                        </h2>
-                        <p className="text-st-red tracking-[0.5em] font-bold">CHOOSE YOUR CHALLENGE</p>
-                    </div>
-
-                    <div className="grid md:grid-cols-3 gap-8">
-                        <div className="glass-premium p-10 rounded-2xl border border-st-red/20 group hover:border-st-red/50 transition-all duration-500">
-                            <div className="text-4xl mb-6">⚙️</div>
-                            <h3 className="text-2xl font-black text-white mb-4">TECHNICAL</h3>
-                            <p className="text-gray-400 mb-8">From competitive coding to AI innovation, prove your technical prowess.</p>
-                            <Link to="/events" className="text-st-red font-bold tracking-widest hover:text-white transition-colors">EXPLORE →</Link>
-                        </div>
-                        <div className="glass-premium p-10 rounded-2xl border border-white/10 group hover:border-st-red/50 transition-all duration-500">
-                            <div className="text-4xl mb-6">🎮</div>
-                            <h3 className="text-2xl font-black text-white mb-4">NON-TECH</h3>
-                            <p className="text-gray-400 mb-8">Creative challenges, gaming, and strategy events for everyone.</p>
-                            <Link to="/events" className="text-st-red font-bold tracking-widest hover:text-white transition-colors">EXPLORE →</Link>
-                        </div>
-                        <div className="glass-premium p-10 rounded-2xl border border-st-red/40 group hover:border-st-red/70 transition-all duration-500 bg-st-red/5">
-                            <div className="text-4xl mb-6">🔥</div>
-                            <h3 className="text-2xl font-black text-st-red mb-4">FLAGSHIP</h3>
-                            <p className="text-gray-400 mb-8">The ultimate cinematic battle. Only for the true roarers.</p>
-                            <Link to="/events" className="text-st-red font-bold tracking-widest hover:text-white transition-colors">EXPLORE →</Link>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            {/* Contact Section */}
-            <div id="contact" className="relative z-10 container mx-auto px-6 py-32 border-t border-st-red/10">
-                <div className="max-w-4xl mx-auto text-center space-y-12">
-                    <div className="space-y-4">
-                        <h2 className="text-5xl md:text-7xl font-black text-white tracking-tighter" style={{ textShadow: '0 0 50px rgba(255,0,51,0.8)' }}>
-                            GET IN TOUCH
-                        </h2>
-                        <p className="text-st-red tracking-[0.3em] font-bold">THE GATE IS OPEN</p>
-                    </div>
-                    <div className="grid md:grid-cols-2 gap-8 text-left">
-                        <div className="glass-premium p-8 rounded-2xl border border-st-red/20 space-y-6">
-                            <div className="space-y-2">
-                                <label className="text-st-red text-xs font-black tracking-widest uppercase">Email</label>
-                                <p className="text-xl font-bold text-white">intellina2k26@cit.edu.in</p>
-                            </div>
-                            <div className="space-y-2">
-                                <label className="text-st-red text-xs font-black tracking-widest uppercase">Location</label>
-                                <p className="text-xl font-bold text-white">CIT Main Campus, Coimbatore</p>
-                            </div>
-                        </div>
-                        <div className="glass-premium p-8 rounded-2xl border border-st-red/20 flex flex-col justify-center items-center space-y-4">
-                            <p className="text-gray-400 text-center">Follow the roar on social media for real-time updates.</p>
-                            <div className="flex gap-6 text-2xl">
-                                <span className="cursor-pointer hover:text-st-red transition-colors">📸</span>
-                                <span className="cursor-pointer hover:text-st-red transition-colors">🐦</span>
-                                <span className="cursor-pointer hover:text-st-red transition-colors">💼</span>
                             </div>
                         </div>
                     </div>
