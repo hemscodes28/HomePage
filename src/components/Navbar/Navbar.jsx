@@ -6,7 +6,7 @@ import deptLogo from '../../assets/images/logo/dept-logo.png';
 
 const Navbar = () => {
     return (
-        <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[80%] max-w-7xl">
+        <nav className="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 w-[60%] max-w-7xl">
             <div id="innovative-navbar" className="innovative-navbar glass-premium glass-premium--red rounded-full px-8 py-4 flex justify-between items-center group/nav overflow-hidden relative" style={{ borderRadius: '9999px' }}>
                 {/* Holographic Grid Pattern */}
                 <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(rgba(255,0,51,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(255,0,51,0.3) 1px, transparent 1px)', backgroundSize: '15px 15px', animation: 'nav-grid-move 15s linear infinite' }}></div>
@@ -40,7 +40,7 @@ const Navbar = () => {
 
                         {/* Logo Container with White Background - Circular */}
                         <div className="relative z-10 bg-white rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] p-1">
-                            <img src={sympoLogo} alt="Coimbatore Institute of Technology" className="h-14 w-auto object-contain transform transition-transform duration-700 group-" />
+                            <img src={sympoLogo} alt="Coimbatore Institute of Technology" className="h-10 w-auto object-contain transform transition-transform duration-700 group-" />
                         </div>
                     </div>
 
@@ -56,7 +56,7 @@ const Navbar = () => {
 
                         {/* Logo Container with White Background */}
                         <div className="relative z-10 bg-white rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] p-1">
-                            <img src={deptLogo} alt="AI & DS Association" className="h-14 w-14 object-contain transform transition-transform duration-700 group-" />
+                            <img src={deptLogo} alt="AI & DS Association" className="h-10 w-10 object-contain transform transition-transform duration-700 group-" />
                         </div>
                     </div>
 
@@ -94,7 +94,7 @@ const Navbar = () => {
                 </ul>
 
                 {/* Developer Button */}
-                <Link to="/developers" className="px-6 py-3 bg-black/80 text-white font-black text-lg rounded-lg border-2 border-st-red/50 hover:border-st-red hover:bg-st-red hover:text-black transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_rgba(255,0,51,0.8)] relative z-10 overflow-hidden group/dev backdrop-blur-sm">
+                <Link to="/developers" className="px-4 py-2 bg-black/80 text-white font-black text-sm rounded-lg border-2 border-st-red/50 hover:border-st-red hover:bg-st-red hover:text-black transition-all duration-500 hover:scale-110 hover:shadow-[0_0_40px_rgba(255,0,51,0.8)] relative z-10 overflow-hidden group/dev backdrop-blur-sm">
                     <span className="relative z-10 font-mono">&lt;/&gt;</span>
                     {/* Developer Btn Glow */}
                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover/dev:translate-x-full transition-transform duration-1000"></div>
