@@ -8,49 +8,57 @@ const Developers = () => {
             name: 'Abinaya',
             title: 'Developer',
             handle: 'abinaya',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/ff0033?text=Abinaya',
+            avatarUrl: '/src/assets/images/developers/abinaya.png',
+            linkedinUrl: 'https://www.linkedin.com/in/abinaya-santhana-kumar-5a7340316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         },
         {
             name: 'Agila',
             title: 'Developer',
             handle: 'agila',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/7dbeff?text=Agila',
+            avatarUrl: '/src/assets/images/developers/Akila.png',
+            linkedinUrl: 'https://www.linkedin.com/in/agila-tamil-selvan-859b82325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         },
         {
             name: 'Hemkumar',
             title: 'Developer',
             handle: 'hemkumar',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/ff0033?text=Hemkumar',
+            avatarUrl: '/src/assets/images/developers/Hemkumar.png',
+            linkedinUrl: 'https://www.linkedin.com/in/hemkumar-r-7b749b326/',
         },
         {
             name: 'Kiruthika',
             title: 'Developer',
             handle: 'kiruthika',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/7dbeff?text=Kiruthika',
+            avatarUrl: '/src/assets/images/developers/kirthika.png',
+            linkedinUrl: 'https://www.linkedin.com/in/kiruthika-k-477775396',
         },
         {
             name: 'Nandhakishore',
             title: 'Developer',
             handle: 'nandhakishore',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/ff0033?text=Nandhakishore',
+            avatarUrl: '/src/assets/images/developers/nandhakishore.png',
+            linkedinUrl: 'https://www.linkedin.com/in/nandhakishore-bakkiyaraj-b89600332',
         },
         {
             name: 'Satthikumar',
             title: 'Developer',
             handle: 'satthikumar',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/7dbeff?text=Satthikumar',
+            avatarUrl: '/src/assets/images/developers/satthikumar.png',
+            linkedinUrl: 'https://www.linkedin.com/in/satthikumar-m-998ba5325?utm_source=share_via&utm_content=profile&utm_medium=member_android',
         },
         {
             name: 'Shagul Hameeth',
             title: 'Developer',
             handle: 'shagulhameeth',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/ff0033?text=Shagul',
+            avatarUrl: '/src/assets/images/developers/shagul.png',
+            linkedinUrl: 'https://www.linkedin.com/in/shagul-hameeth-j-2a52bb326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         },
         {
             name: 'Thirumaran',
             title: 'Developer',
             handle: 'thirumaran',
-            avatarUrl: 'https://via.placeholder.com/400x600/1a1a2e/7dbeff?text=Thirumaran',
+            avatarUrl: '/src/assets/images/developers/thirumaran.png',
+            linkedinUrl: 'https://www.linkedin.com/in/thiru-maran-b30600326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app',
         },
     ];
 
@@ -82,10 +90,12 @@ const Developers = () => {
                             avatarUrl={member.avatarUrl}
                             enableTilt={true}
                             enableMobileTilt={false}
-                            behindGlowEnabled={true}
-                            behindGlowColor="rgba(255, 0, 51, 0.67)"
-                            customInnerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
+                            showBehindGlow={true}
+                            behindGlowColor="rgba(125, 190, 255, 0.67)"
+                            innerGradient="linear-gradient(145deg,#60496e8c 0%,#71C4FF44 100%)"
                             showUserInfo={false}
+                            showIcon={true}
+                            linkedinUrl={member.linkedinUrl}
                             onContactClick={() => console.log(`Contact ${member.name}`)}
                         />
                     ))}

@@ -55,8 +55,8 @@ const Navbar = () => {
                         <div className="absolute inset-0 bg-gradient-to-tr from-st-red/30 to-white/10 rounded-full scale-0 group-hover:scale-110 transition-transform duration-700 opacity-0 group-hover:opacity-100"></div>
 
                         {/* Logo Container with White Background */}
-                        <div className="relative z-10 bg-white rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] p-1.5">
-                            <img src={deptLogo} alt="AI & DS Association" className="h-10 w-10 object-contain transform transition-transform duration-700 group-" />
+                        <div className="relative z-10 bg-white rounded-full overflow-hidden flex items-center justify-center transition-all duration-500 group-hover:shadow-[0_0_40px_rgba(255,255,255,0.4)] p-1">
+                            <img src={deptLogo} alt="AI & DS Association" className="h-14 w-14 object-contain transform transition-transform duration-700 group-" />
                         </div>
                     </div>
 
@@ -64,13 +64,13 @@ const Navbar = () => {
                 </div>
 
                 <ul className="hidden md:flex items-center space-x-6 relative z-10">
-                    <li><a href="#home-page" className="nav-link relative text-sm font-black tracking-[0.2em] text-gray-400 hover:text-white transition-all duration-500 py-2 px-4 rounded-xl group/link overflow-hidden">
+                    <li><Link to="/" className="nav-link relative text-sm font-black tracking-[0.2em] text-gray-400 hover:text-white transition-all duration-500 py-2 px-4 rounded-xl group/link overflow-hidden">
                         <span className="relative z-10">HOME</span>
                         {/* Animated Gradient Underline */}
                         <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-transparent via-st-red to-transparent group-hover/link:w-full transition-all duration-700 ease-in-out" style={{ boxShadow: '0 0 15px rgba(255,0,51,0.8)' }}></span>
                         {/* Internal Shimmer */}
                         <span className="absolute inset-0 bg-gradient-to-r from-transparent via-st-red/10 to-transparent -translate-x-full group-hover/link:translate-x-full transition-transform duration-1000"></span>
-                    </a></li>
+                    </Link></li>
                     <li><a href="#about" className="nav-link relative text-sm font-black tracking-[0.2em] text-gray-400 hover:text-white transition-all duration-500 py-2 px-4 rounded-xl group/link overflow-hidden">
                         <span className="relative z-10">ABOUT</span>
                         <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[3px] bg-gradient-to-r from-transparent via-st-red to-transparent group-hover/link:w-full transition-all duration-700 ease-in-out" style={{ boxShadow: '0 0 15px rgba(255,0,51,0.8)' }}></span>

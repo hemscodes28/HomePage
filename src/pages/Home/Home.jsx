@@ -148,7 +148,7 @@ const Home = () => {
                     <div className="w-full lg:w-[50%] flex flex-col items-center text-center space-y-8 animate-slide-up opacity-0 pointer-events-auto" style={{ animationFillMode: 'forwards', animationDelay: '0.2s' }}>
                         <div className="flex flex-col space-y-2 items-center">
                             <span className="text-st-red text-base md:text-lg font-bold tracking-wide" style={{ textShadow: '0 0 20px rgba(255,0,51,0.6)' }}>DEPARTMENT OF ARTIFICIAL INTELLIGENCE & DATA SCIENCE</span>
-                            <span className="text-white text-sm md:text-base font-semibold tracking-widest uppercase">Proudly Presents</span>
+                            <span className="text-white text-sm md:text-base font-semibold tracking-widest uppercase italic">Proudly Presents</span>
                             <span className="text-gray-400 text-sm md:text-base font-bold tracking-wide uppercase">National Level Technical Symposium</span>
                         </div>
 
@@ -280,7 +280,7 @@ const Home = () => {
                                 <div className="st-robot-wrapper w-full h-full relative">
                                     <iframe src='https://my.spline.design/genkubgreetingrobot-fzWnKIUrSKa0RwHGiBYduZeq/' frameBorder='0' width='100%' height='100%'></iframe>
                                     {/* Spline Watermark Hider Overlay */}
-                                    <div className="absolute bottom-0 right-0 w-32 h-12 bg-black/0 z-50 pointer-events-auto cursor-default" title="Spline Watermark Hider"></div>
+                                    <div className="absolute bottom-0 right-0 w-32 h-12 bg-black z-50 pointer-events-auto cursor-default" title="Spline Watermark Hider"></div>
                                 </div>
                             </div>
                         </div>
